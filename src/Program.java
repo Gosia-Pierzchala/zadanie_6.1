@@ -7,16 +7,21 @@ public class Program {
         Random rand = new Random();
 
         for (int i = 0; i < tablica.length; i++) {
-            tablica[i] = rand.nextInt();
+            tablica[i] = rand.nextInt(100);
         }
 
-        for (int i = 0; i < tablica.length; i++) {
-            System.out.print(tablica[i] + " ");
-        }
-
-        for (int i = tablica.length - 1; i >= 0; i--) {
-            System.out.print(tablica[i] + " ");
+        for (int i = 0; i < tablica.length * 2; i++){
+            if(i < tablica.length){
+                System.out.print(tablica[i] + " ");
+            } else {
+                int x = tablica.length - (i - tablica.length) - 1;
+                System.out.print(tablica[x] + " ");
+            }
         }
 
     }
 }
+
+
+
+
